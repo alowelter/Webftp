@@ -25,7 +25,7 @@ if ($_SESSION["lang"] == "" || isset($_POST["lang"]))
 
 //$langFileArray = getFileArray("languages");
 
-include($languages_dir . "/pt_br.php");
+include($languages_dir . "/en_us.php");
 
 //if (in_array($_SESSION["lang"], $langFileArray))
 include($languages_dir . "/" . $_SESSION["lang"]);
@@ -441,7 +441,7 @@ function displayLoginForm($posted)
 
             <div align="center">
                 <div id="loginForm" align="left">
-                    <div id="loginFormTitle">Monsta FTP</div>
+                    <div id="loginFormTitle">AloWelter WebFTP</div>
                     <div id="loginFormContent">
 
                         <?php
@@ -478,9 +478,9 @@ function displayLoginForm($posted)
                             ?>: <input type="text" name="ftp_port" value="<?php
                                                                             echo sanitizeStrTrim($ftp_port);
                                                                             ?>" size="3" class="<?php
-                                                                    if ($posted == 1 && $ftp_port == "")
-                                                                        echo "bgFormError";
-                                                                    ?>" tabindex="-1">
+                                                                                                if ($posted == 1 && $ftp_port == "")
+                                                                                                    echo "bgFormError";
+                                                                                                ?>" tabindex="-1">
                             <p>
                             <?php
                         }
@@ -2910,30 +2910,30 @@ function displayAjaxFooter()
                                                                                             if (substr($chmod, 0, 1) == "r")
                                                                                                 echo "checked";
                                                                                             ?> onclick="updateChmodNum(this.id,<?php
-                                                    echo $n_r;
-                                                    ?>)"> <?php
-                                            echo $lang_chmod_read;
-                                            ?></div>
+                                                                                                                                echo $n_r;
+                                                                                                                                ?>)"> <?php
+                                                                                                                                        echo $lang_chmod_read;
+                                                                                                                                        ?></div>
                     <div class="checkboxChmod"><input type="checkbox" id="<?php
                                                                             echo $type;
                                                                             ?>_w" value="1" <?php
                                                                                             if (substr($chmod, 1, 1) == "w")
                                                                                                 echo "checked";
                                                                                             ?> onclick="updateChmodNum(this.id,<?php
-                                                    echo $n_w;
-                                                    ?>)"> <?php
-                                            echo $lang_chmod_write;
-                                            ?></div>
+                                                                                                                                echo $n_w;
+                                                                                                                                ?>)"> <?php
+                                                                                                                                        echo $lang_chmod_write;
+                                                                                                                                        ?></div>
                     <div class="checkboxChmod"><input type="checkbox" id="<?php
                                                                             echo $type;
                                                                             ?>_e" value="1" <?php
                                                                                             if (substr($chmod, 2, 1) == "x")
                                                                                                 echo "checked";
                                                                                             ?> onclick="updateChmodNum(this.id,<?php
-                                                    echo $n_e;
-                                                    ?>)"> <?php
-                                            echo $lang_chmod_exe;
-                                            ?></div>
+                                                                                                                                echo $n_e;
+                                                                                                                                ?>)"> <?php
+                                                                                                                                        echo $lang_chmod_exe;
+                                                                                                                                        ?></div>
                 <?php
                 }
                 ?>
