@@ -1,6 +1,6 @@
 <?php
 
-$ftpHost = "216.238.106.123";
+$ftpHost = "sv247.alowelter.com.br";
 $ftpPort = "21";
 $ftpMode = "1";
 $ftpSSL  = "0";
@@ -10,7 +10,7 @@ $editableExts = "asp,ashx,asmx,aspx,asx,axd,cfm,cgi,css,html,htm,jhtml,js,php,ph
 $sessionName = "";
 $dateFormatUsa = 0;
 $lockOutTime = 5;
-$versionCheck = 0;
+$versionCheck = 1;
 $showAdvOption = 1;
 $showLockSess = 1;
 $showHostInfo = 1;
