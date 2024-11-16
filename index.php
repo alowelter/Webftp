@@ -107,49 +107,49 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
     attemptLogin();
 
     // Check referer
-    if (checkReferer() == 1) {
+    //if (checkReferer() == 1) {
 
-        // Process any FTP actions
-        processActions();
+    // Process any FTP actions
+    processActions();
 
-        // Display content when logged in
-        if ($_SESSION["loggedin"] == 1) {
-
-            if ($ajaxRequest == 0) {
-                displayFormStart();
-                displayFtpActions();
-                displayAjaxDivOpen();
-            }
-
-            // Display FTP folder history
-            displayFtpHistory();
-
-            // Display folder/file listing
-            displayFiles();
-
-            // Load error window
-            displayErrors();
-
-            if ($ajaxRequest == 0) {
-                displayAjaxDivClose();
-                displayAjaxIframe();
-                displayUploadProgress();
-                displayAjaxFooter();
-                loadJsLangVars();
-                loadAjax();
-                writeHiddenDivs();
-                displayFormEnd();
-                //displayAjaxIframe();
-                loadEditableExts();
-            }
-        }
+    // Display content when logged in
+    if ($_SESSION["loggedin"] == 1) {
 
         if ($ajaxRequest == 0) {
+            displayFormStart();
+            displayFtpActions();
+            displayAjaxDivOpen();
+        }
 
-            // Include the footer
-            displayFooter();
+        // Display FTP folder history
+        displayFtpHistory();
+
+        // Display folder/file listing
+        displayFiles();
+
+        // Load error window
+        displayErrors();
+
+        if ($ajaxRequest == 0) {
+            displayAjaxDivClose();
+            displayAjaxIframe();
+            displayUploadProgress();
+            displayAjaxFooter();
+            loadJsLangVars();
+            loadAjax();
+            writeHiddenDivs();
+            displayFormEnd();
+            //displayAjaxIframe();
+            loadEditableExts();
         }
     }
+
+    if ($ajaxRequest == 0) {
+
+        // Include the footer
+        displayFooter();
+    }
+    //}
 }
 
 // Close FTP connection
