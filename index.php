@@ -333,7 +333,7 @@ function displayHeader()
     <html>
 
     <head>
-        <title>Monsta FTP</title>
+        <title>AloWelter WebFTP</title>
         <link href="css/style.css?<?php echo date("U"); ?>" rel="stylesheet" type="text/css">
         <link href="css/colors.css?<?php echo date("U"); ?>" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -342,8 +342,8 @@ function displayHeader()
     <body <?php
             if ($_POST["login"] == 1) {
             ?>onresize="setFileWindowSize('ajaxContentWindow',0,0);" <?php
-                                                        }
-                                                            ?>>
+                                                                    }
+                                                                        ?>>
     <?php
 }
 
@@ -470,17 +470,17 @@ function displayLoginForm($posted)
                             <br><input type="text" name="ftp_host" value="<?php
                                                                             echo sanitizeStrTrim($ftp_host);
                                                                             ?>" size="30" class="<?php
-                            if ($posted == 1 && $ftp_host == "")
-                                echo "bgFormError";
-                        ?>">
+                                                                                                    if ($posted == 1 && $ftp_host == "")
+                                                                                                        echo "bgFormError";
+                                                                                                    ?>">
                             <?php
                             echo $lang_port;
                             ?>: <input type="text" name="ftp_port" value="<?php
-                                                echo sanitizeStrTrim($ftp_port);
-                                                ?>" size="3" class="<?php
-                            if ($posted == 1 && $ftp_port == "")
-                                echo "bgFormError";
-                    ?>" tabindex="-1">
+                                                                            echo sanitizeStrTrim($ftp_port);
+                                                                            ?>" size="3" class="<?php
+                                                                    if ($posted == 1 && $ftp_port == "")
+                                                                        echo "bgFormError";
+                                                                    ?>" tabindex="-1">
                             <p>
                             <?php
                         }
@@ -492,9 +492,9 @@ function displayLoginForm($posted)
                             <br><input type="text" name="ftp_user" value="<?php
                                                                             echo sanitizeStrTrim($ftp_user);
                                                                             ?>" size="30" class="<?php
-                        if ($posted == 1 && $ftp_user == "")
-                            echo "bgFormError";
-                        ?>">
+                                                                                                    if ($posted == 1 && $ftp_user == "")
+                                                                                                        echo "bgFormError";
+                                                                                                    ?>">
 
                             <p><?php
                                 echo $lang_password;
@@ -502,9 +502,9 @@ function displayLoginForm($posted)
                                 <br><input type="password" name="ftp_pass" value="<?php
                                                                                     echo sanitizeStrTrim($ftp_pass);
                                                                                     ?>" size="30" class="<?php
-                        if ($posted == 1 && $ftp_pass == "")
-                            echo "bgFormError";
-                        ?>" autocomplete="off">
+                                                                                                            if ($posted == 1 && $ftp_pass == "")
+                                                                                                                echo "bgFormError";
+                                                                                                            ?>" autocomplete="off">
 
                             <p><input type="submit" value="<?php
                                                             echo $lang_btn_login;
@@ -522,8 +522,8 @@ function displayLoginForm($posted)
                                                                                 if ($ftp_pasv == 1)
                                                                                     echo "checked";
                                                                                 ?> tabindex="-1"> <?php
-                                    echo $lang_passive_mode;
-                    ?>
+                                                                                                    echo $lang_passive_mode;
+                                                                                                    ?>
                                 <?php
                                     if (function_exists('ftp_ssl_connect')) {
                                 ?>
@@ -531,8 +531,8 @@ function displayLoginForm($posted)
                                                                                 if ($ftp_ssl == 1)
                                                                                     echo "checked";
                                                                                 ?> tabindex="-1"> <?php
-                                        echo $lang_ftp_ssl;
-                    ?>
+                                                                                                    echo $lang_ftp_ssl;
+                                                                                                    ?>
                         <?php
                                     }
                                 }
@@ -544,8 +544,8 @@ function displayLoginForm($posted)
                                                                                 if ($ip_check == 1)
                                                                                     echo "checked";
                                                                                 ?> tabindex="-1"> <?php
-                            echo $lang_ip_check;
-                    ?>
+                                                                                                    echo $lang_ip_check;
+                                                                                                    ?>
                             <?php
                         }
                             ?>
@@ -556,8 +556,8 @@ function displayLoginForm($posted)
                                                                                     if ($interface == "adv" || $interface == "")
                                                                                         echo "checked";
                                                                                     ?> tabindex="-1"> <?php
-                                echo $lang_adv_interface;
-                    ?>
+                                                                                                        echo $lang_adv_interface;
+                                                                                                        ?>
                             <?php
                             } else {
                             ?>
@@ -569,8 +569,8 @@ function displayLoginForm($posted)
                                                                                     if ($login_save == 1)
                                                                                         echo "checked";
                                                                                     ?> tabindex="-1"> <?php
-                    echo $lang_save_login;
-                    ?>
+                                                                                                        echo $lang_save_login;
+                                                                                                        ?>
 
                             <p>
                                 <hr noshade>
@@ -1562,16 +1562,16 @@ function displayFtpActions()
         <input type="button" value="<?php
                                     echo $lang_btn_refresh;
                                     ?>" onClick="refreshListing()" class="<?php
-                                        echo adjustButtonWidth($lang_btn_refresh);
-                                        ?>">
+                                                                            echo adjustButtonWidth($lang_btn_refresh);
+                                                                            ?>">
         <?php
         if (class_exists('ZipArchive') == 1) {
         ?>
             <input type="button" id="actionButtonDl" value="<?php
                                                             echo $lang_btn_dl;
                                                             ?>" onClick="actionDownloadZip()" disabled class="<?php
-                                                    echo adjustButtonWidth($lang_btn_dl);
-                                                    ?>">
+                                                                                                                echo adjustButtonWidth($lang_btn_dl);
+                                                                                                                ?>">
         <?php
         } else {
         ?>
@@ -1580,36 +1580,36 @@ function displayFtpActions()
         <input type="button" id="actionButtonCut" value="<?php
                                                             echo $lang_btn_cut;
                                                             ?>" onClick="actionFunctionCut('','');" disabled class="<?php
-                                                        echo adjustButtonWidth($lang_btn_cut);
-                                                        ?>">
+                                                                                                                    echo adjustButtonWidth($lang_btn_cut);
+                                                                                                                    ?>">
         <input type="button" id="actionButtonCopy" value="<?php
                                                             echo $lang_btn_copy;
                                                             ?>" onClick="actionFunctionCopy('','');" disabled class="<?php
-                                                            echo adjustButtonWidth($lang_btn_copy);
-                                                            ?>">
+                                                                                                                        echo adjustButtonWidth($lang_btn_copy);
+                                                                                                                        ?>">
         <input type="button" id="actionButtonPaste" value="<?php
                                                             echo $lang_btn_paste;
                                                             ?>" onClick="actionFunctionPaste('');" disabled class="<?php
-                                                        echo adjustButtonWidth($lang_btn_paste);
-                                                        ?>">
+                                                                                                                    echo adjustButtonWidth($lang_btn_paste);
+                                                                                                                    ?>">
         <input type="button" id="actionButtonRename" value="<?php
                                                             echo $lang_btn_rename;
                                                             ?>" onClick="actionFunctionRename('','');" disabled class="<?php
-                                                            echo adjustButtonWidth($lang_btn_rename);
-                                                            ?>">
+                                                                                                                        echo adjustButtonWidth($lang_btn_rename);
+                                                                                                                        ?>">
         <input type="button" id="actionButtonDelete" value="<?php
                                                             echo $lang_btn_delete;
                                                             ?>" onClick="actionFunctionDelete('','');" disabled class="<?php
-                                                            echo adjustButtonWidth($lang_btn_delete);
-                                                            ?>">
+                                                                                                                        echo adjustButtonWidth($lang_btn_delete);
+                                                                                                                        ?>">
         <?php
         if (function_exists('ftp_chmod') && $_SESSION["interface"] == "adv" && ($_SESSION["win_lin"] == "lin" || $_SESSION["win_lin"] == "mac")) {
         ?>
             <input type="button" id="actionButtonChmod" value="<?php
                                                                 echo $lang_btn_chmod;
                                                                 ?>" onClick="actionFunctionChmod('','');" disabled class="<?php
-                                                            echo adjustButtonWidth($lang_btn_chmod);
-                                                            ?>">
+                                                                                                                            echo adjustButtonWidth($lang_btn_chmod);
+                                                                                                                            ?>">
         <?php
         }
         ?>
@@ -1617,8 +1617,8 @@ function displayFtpActions()
             <input type="button" value="<?php
                                         echo $lang_btn_logout;
                                         ?>" onClick="actionFunctionLogout();" class="<?php
-                                                echo adjustButtonWidth($lang_btn_logout);
-                                                ?>">
+                                                                                        echo adjustButtonWidth($lang_btn_logout);
+                                                                                        ?>">
         </div>
 
         <div class="floatRight">
@@ -1709,21 +1709,21 @@ function displayAjaxFooter()
                 <span><?php
                         echo $lang_info_host;
                         ?>:</span> <?php
-                echo $_SESSION["ftp_host"];
-            ?>
+                                    echo $_SESSION["ftp_host"];
+                                    ?>
             <?php
             }
             ?>
             <span><?php
                     echo $lang_info_user;
                     ?>:</span> <?php
-            echo $_SESSION["ftp_user"];
-            ?>
+                                echo $_SESSION["ftp_user"];
+                                ?>
             <span><?php
                     echo $lang_info_upload_limit;
                     ?>:</span> <?php
-            echo formatFileSize($_SESSION["upload_limit"]);
-            ?>
+                                echo formatFileSize($_SESSION["upload_limit"]);
+                                ?>
             <!-- <span><?php
                         echo $lang_info_drag_drop;
                         ?>:</span> <div id="dropFilesCheckDiv"></div> --> <!-- Drag & Drop check commented out as considered redundant -->
@@ -1733,24 +1733,24 @@ function displayAjaxFooter()
             <input type="button" value="<?php
                                         echo $lang_btn_new_folder;
                                         ?>" onClick="processForm('&ftpAction=newFolder')" class="<?php
-                                                            echo adjustButtonWidth($lang_btn_new_folder);
-                                                            ?>">
+                                                                                                    echo adjustButtonWidth($lang_btn_new_folder);
+                                                                                                    ?>">
         </div>
 
         <div class="floatLeft10">
             <input type="button" value="<?php
                                         echo $lang_btn_new_file;
                                         ?>" onClick="processForm('&ftpAction=newFile')" class="<?php
-                                                        echo adjustButtonWidth($lang_btn_new_file);
-                                                        ?>">
+                                                                                                echo adjustButtonWidth($lang_btn_new_file);
+                                                                                                ?>">
         </div>
 
         <div class="floatLeft10">
             <input type="button" value="<?php
                                         echo $lang_btn_fetch_file;
                                         ?>" onClick="processForm('&ftpAction=fetchFile')" class="<?php
-                                                            echo adjustButtonWidth($lang_btn_fetch_file);
-                                                            ?>">
+                                                                                                    echo adjustButtonWidth($lang_btn_fetch_file);
+                                                                                                    ?>">
         </div>
 
         <div id="uploadButtonsDiv">
@@ -2887,8 +2887,8 @@ function displayAjaxFooter()
                     <input type="text" size="4" name="chmodNum" id="chmodNum" value="<?php
                                                                                         echo $chmod;
                                                                                         ?>" onkeypress="if (event.keyCode == 13){ processForm('<?php
-                                                        echo $vars;
-                                                        ?>'); activateActionButtons(0,0); return false;}">
+                                                                                                                                                echo $vars;
+                                                                                                                                                ?>'); activateActionButtons(0,0); return false;}">
                 <?php
                 } else {
                 ?>
@@ -2907,33 +2907,33 @@ function displayAjaxFooter()
                     <div class="checkboxChmod"><input type="checkbox" id="<?php
                                                                             echo $type;
                                                                             ?>_r" value="1" <?php
-                    if (substr($chmod, 0, 1) == "r")
-                        echo "checked";
-                ?> onclick="updateChmodNum(this.id,<?php
-                                    echo $n_r;
-                                    ?>)"> <?php
-                    echo $lang_chmod_read;
-        ?></div>
+                                                                                            if (substr($chmod, 0, 1) == "r")
+                                                                                                echo "checked";
+                                                                                            ?> onclick="updateChmodNum(this.id,<?php
+                                                    echo $n_r;
+                                                    ?>)"> <?php
+                                            echo $lang_chmod_read;
+                                            ?></div>
                     <div class="checkboxChmod"><input type="checkbox" id="<?php
                                                                             echo $type;
                                                                             ?>_w" value="1" <?php
-                    if (substr($chmod, 1, 1) == "w")
-                        echo "checked";
-                ?> onclick="updateChmodNum(this.id,<?php
-                                    echo $n_w;
-                                    ?>)"> <?php
-                    echo $lang_chmod_write;
-        ?></div>
+                                                                                            if (substr($chmod, 1, 1) == "w")
+                                                                                                echo "checked";
+                                                                                            ?> onclick="updateChmodNum(this.id,<?php
+                                                    echo $n_w;
+                                                    ?>)"> <?php
+                                            echo $lang_chmod_write;
+                                            ?></div>
                     <div class="checkboxChmod"><input type="checkbox" id="<?php
                                                                             echo $type;
                                                                             ?>_e" value="1" <?php
-                    if (substr($chmod, 2, 1) == "x")
-                        echo "checked";
-                ?> onclick="updateChmodNum(this.id,<?php
-                                    echo $n_e;
-                                    ?>)"> <?php
-                    echo $lang_chmod_exe;
-        ?></div>
+                                                                                            if (substr($chmod, 2, 1) == "x")
+                                                                                                echo "checked";
+                                                                                            ?> onclick="updateChmodNum(this.id,<?php
+                                                    echo $n_e;
+                                                    ?>)"> <?php
+                                            echo $lang_chmod_exe;
+                                            ?></div>
                 <?php
                 }
                 ?>
