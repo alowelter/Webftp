@@ -1,6 +1,6 @@
 <?php
 
-$ftpHost = "";
+$ftpHost = "sv247.alowelter.com.br";
 $ftpPort = "21";
 $ftpMode = "1";
 $ftpSSL  = "0";
@@ -85,5 +85,3 @@ The maximum size of files that can be uploaded. Measured in megabytes (M).
 which case it will revert to their limit.)
 
 */
-
-?>
