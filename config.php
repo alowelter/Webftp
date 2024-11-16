@@ -1,6 +1,6 @@
 <?php
 
-$ftpHost = "sv247.alowelter.com.br";
+$ftpHost = "216.238.106.123";
 $ftpPort = "21";
 $ftpMode = "1";
 $ftpSSL  = "0";
