@@ -50,7 +50,7 @@ if ($_GET["ftpAction"] == "editProcess")
 
 // Check for AJAX post
 if ($_POST["ftpAction"] != "" || $_GET["ftpAction"] != "")
-    $ajaxRequest = 0; //1;
+    $ajaxRequest = 1;
 else
     $ajaxRequest = 0;
 
@@ -130,6 +130,7 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
             // Load error window
             displayErrors();
 
+            echo '+++' . $ajaxRequest . '###';
             if ($ajaxRequest == 0) {
                 displayAjaxDivClose();
                 displayAjaxIframe();
