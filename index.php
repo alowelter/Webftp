@@ -105,7 +105,7 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
         displayHeader();
     }
 
-    echo '222' . checkReferer();
+    echo '222 -> ' . checkReferer();
 
     // Attempt to login with session or post vars
     attemptLogin();
