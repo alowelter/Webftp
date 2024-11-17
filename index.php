@@ -257,8 +257,6 @@ function attemptLogin()
         // Check for hijacked session with IP check
         if ($_SESSION["ip_check"] == 1) {
 
-            echo ' $$$ ' . $_SERVER['REMOTE_ADDR'];
-
             if ($_SERVER['REMOTE_ADDR'] == $_SESSION["user_ip"]) {
                 $_SESSION["loggedin"] = 1;
             } else {
