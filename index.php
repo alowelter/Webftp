@@ -94,6 +94,8 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
     }
 } else {
 
+    echo '1111';
+
     if ($ajaxRequest == 0) {
 
         // Check if logout link has been clicked
@@ -103,11 +105,14 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
         displayHeader();
     }
 
+    echo '222'
+
     // Attempt to login with session or post vars
     attemptLogin();
 
     // Check referer
     if (checkReferer() == 1) {
+        echo '333';
 
         // Process any FTP actions
         processActions();
