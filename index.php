@@ -118,6 +118,7 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
         // Process any FTP actions
         processActions();
 
+        echo '####';
         // Display content when logged in
         if ($_SESSION["loggedin"] == 1) {
 
