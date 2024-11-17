@@ -110,6 +110,8 @@ if ($ftpAction == "download" || $ftpAction == "download_zip" || $ftpAction == "i
     // Attempt to login with session or post vars
     attemptLogin();
 
+    loadAjax();
+
     // Check referer
     if (checkReferer() == 1) {
         echo '333';
