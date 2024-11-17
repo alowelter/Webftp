@@ -1,5 +1,10 @@
 <?php
 
+// Ativar exibição de erros
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $version = "1.8.8";
 
 require("config.php");
